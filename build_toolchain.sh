@@ -1,12 +1,13 @@
 #!/bin/bash
 
-export PREFIX=$(pwd)/local/cross
+export PREFIX=$(pwd)/toolchain/local/cross
 export TARGET=i386-apple-darwin9.0.0
 
 #brew install gmp
 #brew install mpfr
 #brew install mpc
 
+mkdir toolchain
 mkdir src
 cd ./src
 if [ ! -f gcc-4.6.1.tar.gz ];
