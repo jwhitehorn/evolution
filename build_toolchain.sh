@@ -1,11 +1,7 @@
 #!/bin/bash
 
-export PREFIX=$(pwd)/toolchain/local/cross
+export PREFIX=$(pwd)/toolchain/local
 export TARGET=i386-apple-darwin9.0.0
-
-#brew install gmp
-#brew install mpfr
-#brew install mpc
 
 mkdir toolchain
 cd ./toolchain
@@ -45,7 +41,7 @@ make install-gcc
 
 cd ../build-libc
 #../Libc-763.11/configure --target=$TARGET --prefix=$PREFIX
-
+#todo: get libc compiled
 
 
 
