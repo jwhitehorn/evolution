@@ -45,3 +45,13 @@ make install-gcc
 
 cd ../build-libc
 #../Libc-763.11/configure --target=$TARGET --prefix=$PREFIX
+
+
+
+
+echo "                  .__               "
+echo "  _______  ______ |  |___  __ ____  "
+echo "_/ __ \  \/ /  _ \|  |\  \/ // __ \ "
+echo "\  ___/\   (  <_> )  |_\   /\  ___/ "
+echo " \___  >\_/ \____/|____/\_/  \___  >"
+echo "     \/                          \/ "
