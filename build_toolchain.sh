@@ -30,4 +30,4 @@ cd ../build-gcc
 export PATH=$PATH:$PREFIX/bin
 ../gcc-4.6.1/configure --target=$TARGET --prefix=$PREFIX --disable-nls --without-headers
 make all
-make install
+make install-gcc
