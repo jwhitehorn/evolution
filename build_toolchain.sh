@@ -41,6 +41,7 @@ make install-gcc
 
 ln -s $PREFIX/bin/i386-apple-darwin9.0.0-gcc $PREFIX/bin/gcc
 ln -s $PREFIX/bin/i386-apple-darwin9.0.0-gcc $PREFIX/bin/cc
+ln -s $PREFIX/bin/i386-apple-darwin9.0.0-cpp $PREFIX/bin/cpp
 
 cd ../build-libc
 #../Libc-763.11/configure --target=$TARGET --prefix=$PREFIX
