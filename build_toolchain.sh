@@ -39,6 +39,9 @@ export PATH=$PATH:$PREFIX/bin
 make all
 make install-gcc
 
+ln -s $PREFIX/bin/i386-apple-darwin9.0.0-gcc $PREFIX/bin/gcc
+ln -s $PREFIX/bin/i386-apple-darwin9.0.0-gcc $PREFIX/bin/cc
+
 cd ../build-libc
 #../Libc-763.11/configure --target=$TARGET --prefix=$PREFIX
 #todo: get libc compiled
