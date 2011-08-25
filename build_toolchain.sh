@@ -1,11 +1,13 @@
 #!/bin/bash
 
-export PREFIX=$(pwd)/toolchain/local
+export TOOLCHAIN=$(pwd)/toolchain
+export PREFIX=$TOOLCHAIN/local
 export TARGET=i386-apple-darwin9.0.0
 
 mkdir toolchain
 cd ./toolchain
 mkdir src
+cp -rv ../binary/src/ ./src/
 cd ./src
 if [ ! -f gcc-4.6.1.tar.gz ];
 then
@@ -45,9 +47,19 @@ ln -s $PREFIX/bin/i386-apple-darwin9.0.0-cpp $PREFIX/bin/cpp
 
 cd ../Libc-763.11
 #make build
-#todo: get libc compiled
+#todo: get libc compiled... right now making use of pre-compiled Libc
 
- cp -rv ./include/ $PREFIX/include/
+mkdir $TOOLCHAIN/usr $TOOLCHAIN/usr/include/
+cp -rv ./include/ $TOOLCHAIN/usr/include/
+
+cd ..
+rm -rf ./build-gcc
+mkdir build-gcc
+
+cd build-gcc
+../gcc-4.6.1/configure --target=$TARGET --prefix=$PREFIX --with-sysroot=$TOOLCHAIN --disable-multilib --disable-nls
+make all
+make install-gcc
 
 
 echo "                  .__               "
