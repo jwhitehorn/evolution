@@ -17,9 +17,9 @@ tar -xvzf gcc-4.6.1.tar.gz
 
 if [ ! -f binutils-2.21.1.tar.gz ];
 then
-wget http://ftp.gnu.org/gnu/binutils/binutils-2.21.1.tar.gz -O binutils-2.21.1.tar.gz
+wget http://ftp.gnu.org/gnu/binutils/binutils-2.21.1a.tar.bz2  -O binutils-2.21.1a.tar.bz2  
 fi
-tar -xvzf binutils-2.21.1.tar.gz
+tar -xvjf binutils-2.21.1a.tar.bz2
 
 if [ ! -f libc-763.11.tar.gz ];
 then
