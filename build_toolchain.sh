@@ -17,9 +17,9 @@ tar -xvzf gcc-4.6.1.tar.gz
 
 if [ ! -f binutils-2.21.1.tar.gz ];
 then
-wget http://ftp.gnu.org/gnu/binutils/binutils-2.21.1a.tar.bz2  -O binutils-2.21.1a.tar.bz2  
+wget http://ftp.gnu.org/gnu/binutils/binutils-2.19.tar.bz2  -O binutils-2.19.tar.bz2  
 fi
-tar -xvjf binutils-2.21.1a.tar.bz2
+tar -xvjf binutils-2.19.tar.bz2
 
 if [ ! -f libc-763.11.tar.gz ];
 then
@@ -31,7 +31,7 @@ tar -xvzf libc-763.11.tar.gz
 mkdir build-binutils build-gcc build-libc
 
 cd build-binutils
-../binutils-2.21.1/configure --target=$TARGET --prefix=$PREFIX --disable-nls
+../binutils-2.19/configure --target=$TARGET --prefix=$PREFIX --disable-nls
 make all
 make install
 
