@@ -35,7 +35,7 @@ mkdir build-binutils build-gcc build-libc
 #make all
 #make install
 
-cd ../build-gcc
+cd $TOOLCHAIN/src/build-gcc
 export PATH=$PATH:$PREFIX/bin
 ../gcc-4.6.1/configure --target=$TARGET --prefix=$PREFIX --with-ld=$PREFIX/bin/ld --disable-nls --without-headers
 make all
